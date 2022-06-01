@@ -1,0 +1,29 @@
+import java.util.*;
+
+class smallestarrayelement
+  {
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the number of elements in an array:     ");
+    
+    int number = sc.nextInt();
+    int[] array = new int[100];
+    
+    System.out.println("Enter the elements of the array: ");
+    
+    for (int i = 0; i < number; i++) 
+    {
+      array[i] = sc.nextInt();
+    }
+    int smallestelement=array[0];
+    for(int i=1;i<number;i++)
+      {
+        if (array[i]<smallestelement)
+        {
+          smallestelement=array[i];
+        }
+      }
+    System.out.println("Smallest array element is :"+smallestelement);
+  }
+}
